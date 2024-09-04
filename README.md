@@ -12,7 +12,19 @@ The input of the pretrained EVENnet models must be **320x320x320** dMRI image wi
 
 The `script_to_run.txt` file provides the example command lines to run EVENet. For example, to obtain the anatomical brain parcellation on a `FA` image of `Subject X`, run
 ```
-
-
+python3 /EVENetCNN/run_prediction.py \
+--sd /PATH/TO/SUBJECT_DATA/FA \
+--sid SUB_X \
+--t1 /PATH/TO/SUBJECT_DATA/SUB_X/fa.nii.gz \
+--lut /EVENetCNN/config/EVENet_ColorLUT.tsv \
+--aparc_aseg_segfile pred.nii.gz \
+--cfg_ax /EVENetCNN/config/EvidentialSurferFA_1k_axial.yaml \
+--ckpt_ax /Trained_models/FA/Axial_Best_training_state.pkl \
+--cfg_cor /EVENetCNN/config/EvidentialSurferFA_1k_coronal.yaml \
+--ckpt_cor /Trained_models/FA/Coronal_Best_training_state.pkl \
+--cfg_sag /EVENetCNN/config/EvidentialSurferFA_1k_sagittal.yaml \
+--ckpt_sag /Trained_models/FA/Sagittal_Best_training_state.pkl \
+--batch_size 1 \
+--viewagg_device cpu
 ```
 ### Perform Ensemble
