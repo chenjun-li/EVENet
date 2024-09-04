@@ -1,0 +1,35 @@
+MODEL:
+  MODEL_NAME: "EvidentialCNN"
+  NUM_CLASSES: 58
+  NUM_FILTERS: 58
+  KERNEL_H: 3
+  KERNEL_W: 3
+  BASE_RES: 0.7
+  NUM_CHANNELS: 9
+  OUT_TENSOR_WIDTH: 320
+  OUT_TENSOR_HEIGHT: 320
+  HEIGHT: 320
+  WIDTH: 320
+
+DATA:
+  SIZES: [ 320 ]
+  PADDED_SIZE: 320
+  PLANE: "sagittal"
+  PATH_HDF5_TRAIN: "/data01/hdf5/train_set_sagittal_1ksub_E3.hdf5"
+  PATH_HDF5_VAL: "/data01/hdf5/val_set_sagittal_1ksub_E3.hdf5"
+  AUG: [ "None", "Gaussian" ]
+
+DATA_LOADER:
+  NUM_WORKERS: 3
+
+OPTIMIZER:
+  LR_SCHEDULER: cosineWarmRestarts
+  OPTIMIZING_METHOD: adamW
+
+TRAIN:
+  NUM_EPOCHS: 250
+  BATCH_SIZE: 16
+
+NUM_GPUS: 2
+LOG_DIR: "/data01/experiment"
+EXPR_NUM: "EvidentialSurferE3_1k_sagittal"

@@ -1,0 +1,48 @@
+
+#fa
+python3 /EVENetCNN/run_prediction.py \
+--sd /PATH/TO/SUBJECT_DATA/FA \
+--sid SUB_X \
+--t1 /PATH/TO/SUBJECT_DATA/SUB_X/fa.nii.gz \
+--lut /EVENetCNN/config/EVENet_ColorLUT.tsv \
+--aparc_aseg_segfile pred.nii.gz \
+--cfg_ax /EVENetCNN/config/EvidentialSurferFA_1k_axial.yaml \
+--ckpt_ax /Trained_models/FA/Axial_Best_training_state.pkl \
+--cfg_cor /EVENetCNN/config/EvidentialSurferFA_1k_coronal.yaml \
+--ckpt_cor /Trained_models/FA/Coronal_Best_training_state.pkl \
+--cfg_sag /EVENetCNN/config/EvidentialSurferFA_1k_sagittal.yaml \
+--ckpt_sag /Trained_models/FA/Sagittal_Best_training_state.pkl \
+--batch_size 1 \
+--viewagg_device cpu
+
+#md
+python3 /EVENetCNN/run_prediction.py \
+--sd /PATH/TO/SUBJECT_DATA/MD \
+--sid SUB_X \
+--t1 /PATH/TO/SUBJECT_DATA/SUB_X/md.nii.gz \
+--lut /EVENetCNN/config/EVENet_ColorLUT.tsv \
+--aparc_aseg_segfile pred.nii.gz \
+--cfg_ax /EVENetCNN/config/EvidentialSurferMD_1k_axial.yaml \
+--ckpt_ax /Trained_models/MD/Axial_Best_training_state.pkl \
+--cfg_cor /EVENetCNN/config/EvidentialSurferMD_1k_coronal.yaml \
+--ckpt_cor /Trained_models/MD/Coronal_Best_training_state.pkl \
+--cfg_sag /EVENetCNN/config/EvidentialSurferMD_1k_sagittal.yaml \
+--ckpt_sag /Trained_models/MD/Sagittal_Best_training_state.pkl \
+--batch_size 1 \
+--viewagg_device cpu
+
+#e3
+python3 /EVENetCNN/run_prediction.py \
+--sd /PATH/TO/SUBJECT_DATA/E3 \
+--sid SUB_X \
+--t1 /PATH/TO/SUBJECT_DATA/SUB_X/e3.nii.gz \
+--lut /EVENetCNN/config/EVENet_ColorLUT.tsv \
+--aparc_aseg_segfile pred.nii.gz \
+--cfg_ax /EVENetCNN/config/EvidentialSurferE3_1k_axial.yaml \
+--ckpt_ax /Trained_models/E3/Axial_Best_training_state.pkl \
+--cfg_cor /EVENetCNN/config/EvidentialSurferE3_1k_coronal.yaml \
+--ckpt_cor /Trained_models/E3/Coronal_Best_training_state.pkl \
+--cfg_sag /EVENetCNN/config/EvidentialSurferE3_1k_sagittal.yaml \
+--ckpt_sag /Trained_models/E3/Sagittal_Best_training_state.pkl \
+--batch_size 1 \
+--viewagg_device cpu
