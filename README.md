@@ -30,8 +30,4 @@ python3 /EVENetCNN/run_prediction.py \
 ```
 ### Perform Ensemble
 
-The `script_to_run.txt` file also provides the example command lines to perform ensemble. For example, to ensemble the results from `FA, MD, E3` and obtain final uncertainty estimation of `Subject X`, run
-
-```
-
-```
+To ensemble the results from `FA, MD, E3` and obtain final uncertainty estimation of `Subject X`, run the `/EVENetCNN/utils/deep_ensemble.py` after specifying corresponding input paths.
