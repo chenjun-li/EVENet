@@ -8,7 +8,7 @@ EVENet is built and tested in an environment the same as that specified by FastS
 
 ### Running EVENet Parcellation
 
-The input of the pretrained EVENnet models must be **320x320x320** dMRI image with **1.25x1.25x1.25 mm^3** voxel size.
+The input of the pretrained EVENnet models must be **320x320x320** dMRI image with a voxel size of **1.25x1.25x1.25 \( mm^3 \)**.
 
 The `script_to_run.txt` file provides the example command lines to run EVENet. For example, to obtain the anatomical brain parcellation on a `FA` image of `Subject X`, run
 ```
